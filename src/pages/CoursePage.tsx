@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import sessions from '../data/sessions'
 import { getCompletedSessions } from '../utils/progress'
+import Footer from '../components/Footer'
 
 export default function CoursePage() {
   const [completed, setCompleted] = useState<number[]>([])
@@ -24,13 +25,19 @@ export default function CoursePage() {
             <span style={{ fontFamily: 'var(--font-grotesk)', fontSize: '0.82rem', fontWeight: 700, letterSpacing: '0.18em', color: 'var(--action)', textTransform: 'uppercase' }}>DALIL</span>
           </Link>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-            <div className="progress-track" style={{ width: '80px' }}>
-              <div className="progress-fill" style={{ width: `${pct}%` }} />
+          <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+            <Link to="/about" style={{ fontFamily: 'var(--font-arabic)', fontSize: '0.84rem', color: 'var(--text-secondary)', textDecoration: 'none' }}>
+              عن دليل
+            </Link>
+
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+              <div className="progress-track" style={{ width: '80px' }}>
+                <div className="progress-fill" style={{ width: `${pct}%` }} />
+              </div>
+              <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: 'var(--text-tertiary)', letterSpacing: '0.04em' }}>
+                {completedCount}/{total}
+              </span>
             </div>
-            <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: 'var(--text-tertiary)', letterSpacing: '0.04em' }}>
-              {completedCount}/{total}
-            </span>
           </div>
         </div>
       </nav>
@@ -143,38 +150,7 @@ export default function CoursePage() {
       </main>
 
       {/* ── Footer ── */}
-      <footer style={{ borderTop: '1px solid var(--border)', padding: '20px clamp(20px, 5vw, 48px)', background: 'var(--bg-white)', marginTop: 'auto' }}>
-        <div style={{ maxWidth: '800px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
-            <span style={{ fontFamily: 'var(--font-grotesk)', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.12em', color: 'var(--action)', textTransform: 'uppercase' }}>
-              DALIL · RESEARCH FOUNDATIONS
-            </span>
-            <span style={{ color: 'var(--border)' }}>|</span>
-            <a
-              href="mailto:hello@dalilresearch.org"
-              style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: 'var(--text-secondary)', textDecoration: 'none' }}
-              onMouseEnter={e => (e.currentTarget.style.color = 'var(--action)')}
-              onMouseLeave={e => (e.currentTarget.style.color = 'var(--text-secondary)')}
-            >
-              hello@dalilresearch.org
-            </a>
-          </div>
-
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: 'var(--text-tertiary)' }}>
-              dalilresearch.org
-            </span>
-            <Link to="/" style={{ textDecoration: 'none' }}>
-              <span style={{ fontFamily: 'var(--font-arabic)', fontSize: '0.8rem', color: 'var(--text-secondary)', transition: 'color 0.15s' }}
-                onMouseEnter={e => (e.currentTarget.style.color = 'var(--action)')}
-                onMouseLeave={e => (e.currentTarget.style.color = 'var(--text-secondary)')}
-              >
-                ← الرئيسية
-              </span>
-            </Link>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

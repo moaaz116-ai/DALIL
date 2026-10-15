@@ -2,6 +2,7 @@ import { useParams, Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import sessions from '../data/sessions'
 import { isSessionComplete, markSessionComplete, getCompletedSessions } from '../utils/progress'
+import Footer from '../components/Footer'
 
 export default function SessionPage() {
   const { id } = useParams<{ id: string }>()
@@ -371,6 +372,9 @@ export default function SessionPage() {
           </div>
         </div>
       </main>
+
+      {/* ── Footer ── */}
+      <Footer />
     </div>
   )
 }

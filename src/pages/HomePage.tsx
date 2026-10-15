@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import sessions from '../data/sessions'
+import Footer from '../components/Footer'
 
 const unlockedCount = sessions.filter(s => !s.locked).length
 
@@ -139,12 +140,17 @@ export default function HomePage() {
             <img src="/logo-icon.png" alt="D" />
             <span className="nav-wordmark">DALIL</span>
           </div>
-          <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: 'var(--text-tertiary)' }}>
-            أساسيات البحث العلمي
-          </span>
-          <Link to="/course" className="btn-primary" style={{ padding: '7px 18px', fontSize: '0.82rem' }}>
-            الدورة ←
-          </Link>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: 'var(--text-tertiary)' }}>
+              أساسيات البحث العلمي
+            </span>
+            <Link to="/about" style={{ fontFamily: 'var(--font-arabic)', fontSize: '0.84rem', color: 'var(--text-secondary)', textDecoration: 'none' }}>
+              عن دليل
+            </Link>
+            <Link to="/course" className="btn-primary" style={{ padding: '7px 18px', fontSize: '0.82rem' }}>
+              الدورة ←
+            </Link>
+          </div>
         </div>
       </nav>
 
@@ -571,13 +577,82 @@ export default function HomePage() {
       </section>
 
       {/* ════════════════════════════════════
-          SESSION INDEX (compact)
+          FOUNDER & ACADEMIC LEADERSHIP
       ════════════════════════════════════ */}
       <section style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto', padding: 'clamp(48px, 6vw, 72px) clamp(24px, 5vw, 64px)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '28px' }}>
+            <span style={{ fontFamily: 'var(--font-grotesk)', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--action)' }}>
+              03 / Leadership & Direction
+            </span>
+            <div style={{ flex: 1, height: '1px', background: 'var(--border)' }} />
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.65rem', color: 'var(--text-tertiary)' }}>
+              FOUNDER
+            </span>
+          </div>
+
+          <div style={{
+            background: 'var(--bg-white)',
+            border: '1px solid var(--border)',
+            borderRadius: '2px',
+            padding: 'clamp(28px, 4vw, 36px)',
+          }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '20px', marginBottom: '18px' }}>
+              <div>
+                <span className="t-mono-label" style={{ color: 'var(--action)', fontSize: '0.65rem' }}>LEAD RESEARCHER & CURRICULUM ARCHITECT</span>
+                <h2 style={{ fontFamily: 'var(--font-arabic)', fontSize: '1.5rem', fontWeight: 700, color: 'var(--text-primary)', marginTop: '4px', marginBottom: '2px' }}>
+                  معاذ محمد حامد
+                </h2>
+                <p style={{ fontFamily: 'var(--font-grotesk)', fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
+                  Moaz Mohamed Hamed
+                </p>
+              </div>
+
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                <a
+                  href="mailto:moaz.abdellatif2009@gmail.com"
+                  style={{ fontFamily: 'var(--font-mono)', fontSize: '0.74rem', color: 'var(--text-primary)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '6px' }}
+                >
+                  <span style={{ color: 'var(--text-tertiary)' }}>✉</span> moaz.abdellatif2009@gmail.com
+                </a>
+                <a
+                  href="tel:+201096264652"
+                  style={{ fontFamily: 'var(--font-mono)', fontSize: '0.74rem', color: 'var(--text-primary)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '6px' }}
+                >
+                  <span style={{ color: 'var(--text-tertiary)' }}>☎</span> +20 109 626 4652
+                </a>
+              </div>
+            </div>
+
+            <p style={{ fontFamily: 'var(--font-arabic)', fontSize: '0.92rem', color: 'var(--text-secondary)', lineHeight: 1.85, marginBottom: '20px' }}>
+              انطلقت فكرة «دليل» برؤية شخصية من الباحث <strong>معاذ محمد حامد</strong> بهدف تجسير الفجوة المعرفية لدى الطلاب والباحثين العرب، وتمكينهم من أدوات ومنهجيات التفكير العلمي الرصين وكتابة الأبحاث القابلة للنشر الدولي.
+            </p>
+
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px', borderTop: '1px solid var(--border)', paddingTop: '16px' }}>
+              <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+                <span className="tag" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.62rem' }}>CAIRO · EGYPT</span>
+                <span className="tag" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.62rem' }}>FOUNDATION DIRECTOR</span>
+              </div>
+
+              <Link
+                to="/about"
+                style={{ fontFamily: 'var(--font-arabic)', fontSize: '0.85rem', color: 'var(--action)', fontWeight: 600, textDecoration: 'none' }}
+              >
+                نبذة تفصيلية عن المؤسس ورؤية المنصة ←
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ════════════════════════════════════
+          SESSION INDEX (compact)
+      ════════════════════════════════════ */}
+      <section style={{ background: 'var(--bg-white)', borderBottom: '1px solid var(--border)' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', padding: 'clamp(40px, 6vw, 64px) clamp(24px, 5vw, 64px)' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
             <span style={{ fontFamily: 'var(--font-grotesk)', fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--text-tertiary)' }}>
-              Course Contents
+              Course Contents · 04
             </span>
             <div style={{ flex: 1, height: '1px', background: 'var(--border)' }} />
             <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.68rem', color: 'var(--text-tertiary)' }}>
@@ -615,38 +690,7 @@ export default function HomePage() {
       </section>
 
       {/* ── Footer ── */}
-      <footer style={{ borderTop: '1px solid var(--border)', padding: '24px clamp(20px, 5vw, 48px)', background: 'var(--bg-white)' }}>
-        <div style={{ maxWidth: '1000px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
-            <span style={{ fontFamily: 'var(--font-grotesk)', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.14em', color: 'var(--action)', textTransform: 'uppercase' }}>
-              DALIL · RESEARCH FOUNDATIONS
-            </span>
-            <span style={{ color: 'var(--border-dark)' }}>|</span>
-            <a
-              href="https://dalilresearch.org"
-              style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', color: 'var(--text-secondary)', textDecoration: 'none' }}
-              onMouseEnter={e => (e.currentTarget.style.color = 'var(--action)')}
-              onMouseLeave={e => (e.currentTarget.style.color = 'var(--text-secondary)')}
-            >
-              dalilresearch.org
-            </a>
-          </div>
-
-          <div style={{ display: 'flex', alignItems: 'center', gap: '16px', flexWrap: 'wrap' }}>
-            <a
-              href="mailto:hello@dalilresearch.org"
-              style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', color: 'var(--text-secondary)', textDecoration: 'none' }}
-              onMouseEnter={e => (e.currentTarget.style.color = 'var(--action)')}
-              onMouseLeave={e => (e.currentTarget.style.color = 'var(--text-secondary)')}
-            >
-              hello@dalilresearch.org
-            </a>
-            <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.68rem', color: 'var(--text-tertiary)' }}>
-              © 2026
-            </span>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
