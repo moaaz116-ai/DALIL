@@ -7,6 +7,9 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  build: {
+    emptyOutDir: true,
+  },
   assetsInclude: ['**/*.mp4'],
   server: {
     port: 5173,
