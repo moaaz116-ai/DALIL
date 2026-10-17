@@ -363,6 +363,17 @@ export default function SessionPage() {
               >
                 hello@dalilresearch.org
               </a>
+              <span style={{ color: 'var(--border)' }}>|</span>
+              <a
+                href="https://instagram.com/dalilresearch"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ fontFamily: 'var(--font-mono)', fontSize: '0.68rem', color: 'var(--text-secondary)', textDecoration: 'none' }}
+                onMouseEnter={e => (e.currentTarget.style.color = 'var(--action)')}
+                onMouseLeave={e => (e.currentTarget.style.color = 'var(--text-secondary)')}
+              >
+                @dalilresearch
+              </a>
             </div>
 
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>

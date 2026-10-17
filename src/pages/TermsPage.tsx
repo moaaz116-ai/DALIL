@@ -143,6 +143,12 @@ export default function TermsPage() {
                     +20 109 626 4652
                   </a>
                 </div>
+                <div>
+                  <span style={{ color: 'var(--text-tertiary)' }}>INSTAGRAM: </span>
+                  <a href="https://instagram.com/dalilresearch" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--action)', textDecoration: 'none' }}>
+                    @dalilresearch
+                  </a>
+                </div>
               </div>
             </div>
 

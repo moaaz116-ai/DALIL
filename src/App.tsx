@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
+import ScrollToTop from './components/ScrollToTop'
 import HomePage from './pages/HomePage'
 import CoursePage from './pages/CoursePage'
 import SessionPage from './pages/SessionPage'
@@ -8,13 +9,16 @@ import TermsPage from './pages/TermsPage'
 
 export default function App() {
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/about" element={<AboutPage />} />
-      <Route path="/course" element={<CoursePage />} />
-      <Route path="/session/:id" element={<SessionPage />} />
-      <Route path="/privacy" element={<PrivacyPage />} />
-      <Route path="/terms" element={<TermsPage />} />
-    </Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/course" element={<CoursePage />} />
+        <Route path="/session/:id" element={<SessionPage />} />
+        <Route path="/privacy" element={<PrivacyPage />} />
+        <Route path="/terms" element={<TermsPage />} />
+      </Routes>
+    </>
   )
 }

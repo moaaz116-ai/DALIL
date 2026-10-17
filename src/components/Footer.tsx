@@ -43,6 +43,17 @@ export default function Footer() {
                   hello@dalilresearch.org
                 </a>
               </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <span className="t-mono-label" style={{ fontSize: '0.62rem' }}>INSTAGRAM:</span>
+                <a
+                  href="https://instagram.com/dalilresearch"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: 'var(--action)', textDecoration: 'none' }}
+                >
+                  @dalilresearch
+                </a>
+              </div>
             </div>
           </div>
 
@@ -97,6 +108,24 @@ export default function Footer() {
                 +20 109 626 4652
               </a>
 
+              <a
+                href="https://instagram.com/dalilresearch"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  fontFamily: 'var(--font-mono)',
+                  fontSize: '0.72rem',
+                  color: 'var(--action)',
+                  textDecoration: 'none',
+                }}
+              >
+                <span style={{ color: 'var(--text-tertiary)' }}>📷</span>
+                @dalilresearch
+              </a>
+
               <div style={{ marginTop: '8px', paddingTop: '10px', borderTop: '1px solid var(--border)' }}>
                 <Link
                   to="/about"
@@ -135,6 +164,17 @@ export default function Footer() {
                 <Link to="/course" style={{ fontFamily: 'var(--font-arabic)', fontSize: '0.88rem', color: 'var(--text-secondary)', textDecoration: 'none' }}>
                   منهج أساسيات البحث العلمي
                 </Link>
+              </li>
+              <li>
+                <a
+                  href="https://instagram.com/dalilresearch"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ fontFamily: 'var(--font-arabic)', fontSize: '0.88rem', color: 'var(--text-secondary)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '6px' }}
+                >
+                  <span>انستغرام (@dalilresearch)</span>
+                  <span style={{ fontSize: '0.72rem', color: 'var(--text-tertiary)' }}>↗</span>
+                </a>
               </li>
               <li>
                 <Link to="/privacy" style={{ fontFamily: 'var(--font-arabic)', fontSize: '0.88rem', color: 'var(--text-secondary)', textDecoration: 'none' }}>
@@ -179,6 +219,15 @@ export default function Footer() {
             <Link to="/about" style={{ fontFamily: 'var(--font-arabic)', fontSize: '0.78rem', color: 'var(--text-secondary)', textDecoration: 'none' }}>
               من نحن
             </Link>
+            <span style={{ color: 'var(--border)' }}>·</span>
+            <a
+              href="https://instagram.com/dalilresearch"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ fontFamily: 'var(--font-mono)', fontSize: '0.74rem', color: 'var(--action)', textDecoration: 'none' }}
+            >
+              @dalilresearch
+            </a>
           </div>
         </div>
       </div>

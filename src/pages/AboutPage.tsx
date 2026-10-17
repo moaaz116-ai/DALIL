@@ -132,6 +132,14 @@ export default function AboutPage() {
                   >
                     <span>☎</span> +20 109 626 4652
                   </a>
+                  <a
+                    href="https://instagram.com/dalilresearch"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: 'var(--action)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '6px' }}
+                  >
+                    <span>📷</span> instagram.com/dalilresearch (@dalilresearch) ↗
+                  </a>
                 </div>
               </div>
 
