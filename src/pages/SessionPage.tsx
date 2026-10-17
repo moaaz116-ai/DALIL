@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import sessions from '../data/sessions'
 import { isSessionComplete, markSessionComplete, getCompletedSessions } from '../utils/progress'
 import Footer from '../components/Footer'
+import SessionQuiz from '../components/SessionQuiz'
 
 export default function SessionPage() {
   const { id } = useParams<{ id: string }>()
@@ -297,6 +298,14 @@ export default function SessionPage() {
                 )}
               </div>
             </div>
+          </div>
+
+          {/* ── Rule ── */}
+          <hr className="rule" style={{ marginBottom: '24px' }} />
+
+          {/* ── Quiz ── */}
+          <div className="anim-fade-up d4" style={{ marginBottom: '32px' }}>
+            <SessionQuiz sessionId={session.id} />
           </div>
 
           {/* ── Rule ── */}
